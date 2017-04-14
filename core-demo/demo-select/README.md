@@ -159,5 +159,11 @@ var odds = selection.select(function(d, i) { return i > 1 });
 var odds = selection.filter(function(d, i) { return i > 1; });
 ```
 
+## selection.datum([value])
 
+
+## selection.sort([comparator])
+
+
+## selection.order()
 
