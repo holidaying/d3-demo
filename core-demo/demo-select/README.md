@@ -82,6 +82,7 @@ selection.classed(name[, value])
 ```
 //classed
 d3.select('div').classed('divBox',true);
+```
 
 ## 自定义属性style
 
@@ -136,6 +137,7 @@ d3.select('span:last-child').remove();
 selection.enter(),当节点数小于data的数据是，enter则重新生成新元素
 
 selection.exit(),当节点数小于data的数据是，exit便会去掉多余的节点
+
 ```
 //数据和节点不对称的时候使用enter和exit
 var p = d3.select("body")
