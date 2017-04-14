@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../../d3.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+</head>
+<style>
+	.div-box
+	{
+		width:100px;
+		height: 100px;
+		background-color: #00ffff;
+	}
+	.div-position
+	{
+		margin-top: 20px;
+		position: relative;
+	}
+	.border-style
+	{
+		border:1px solid red;
+	}
+</style>
+<body>
+    <h1></h1>
+    <p id="p-text"></p>
+    <p class="p-text"></p>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <div>
+    	
+    </div>
+</body>
+<script>
+d3.select('h1').text("d3 select demo");
+d3.select('#p-text').text("d3 id 选择器");
+d3.select('.p-text').text("d3 class 选择器");
+d3.select('span').text("select选择器只会选择第一个");
+
+//会选择全部匹配的标签
+d3.selectAll('p').style("color", function() {
+return "hsl(" + Math.random() * 360 + ",100%,50%)"; //动态的修改样式
+});
+
+//attr
+d3.selectAll('span').attr("data-name", "attr-name").text(function(d,i){
+	return 'data-name'+i
+});
+
+d3.selectAll('[data-name=attr-name]').style("background", "red");
+
+//classed可以用true或者false来添加和移除类名
+d3.select('div').classed('div-box div-position border-style',true);
+d3.select('div').classed('border-style',false);
+
+//style
+d3.select('div').style('border-radius',"5px",'important');
+
+//html
+d3.select('span').html('<i>hahha</i>');
+
+//append
+d3.select('p').append('div');
+
+//insert
+d3.select('body').insert('div','.p-text').text("在第二个之前插入这个div")
+
+//remove
+d3.select('span:last-child').remove();
+</script>
+
+</html>
+
