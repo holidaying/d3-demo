@@ -1,19 +1,19 @@
 选择元素
 D3提供了两种高级方法来选择元素：select和selectAll。这些方法接收选择器字符串。前者只返回第一个匹配的元素，后者选择在文档遍历次序中所有匹配的元素。这个方法也可以接受节点，这可以用来和第三方库例如JQuery或者开发工具($0)整合。
 
-# d3.select(selector)
+## d3.select(selector)
 
 选中与指定选择器字符串匹配的第一个元素，返回单元素选择结果。如果当前文档中没有匹配的元素则返回空的选择。如果有多个元素被选中，只有第一个匹配的元素（在文档遍历次序中）被选中。
 
-# d3.select(node)
+## d3.select(node)
 
 选择指定的节点。如果你已经有一个节点的引用这将是很有用的。例如事件监听器中的d3.select(this) 或者一个全局对象例如document.body。这个函数不会遍历DOM树。
 
-# d3.selectAll(selector)
+## d3.selectAll(selector)
 
 选中匹配指定选择器的所有的元素。这些元素会按照文档的遍历顺序（从上到下）选择。如果当前文档中没有匹配的元素则返回空的选择。
 
-# d3.selectAll(nodes)
+## d3.selectAll(nodes)
 
 选择指定的元素数组。如果你已经有了一些元素的引用这将是很有用的，例如事件监听器中的d3.selectAll(this.childNodes)，或者一个全局对象例如document.links。节点的参数不用恰好是数组；任何可以转化为一个数组的伪数组（例一个NodeList或者 arguments）都可以，这个函数不会遍历DOM树。
 
