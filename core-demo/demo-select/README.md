@@ -84,9 +84,8 @@ selection.classed(name[, value])
 d3.select('div').classed('divBox',true);
 ```
 
-## 自定义属性style
+## 自定义属性style ,selection.style(name[, value[, priority]])
 
-# selection.style(name[, value[, priority]])
 ```
 d3.select('div').style('border-radius',"5px");
 ```
